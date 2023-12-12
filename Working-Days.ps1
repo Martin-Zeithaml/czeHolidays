@@ -1,11 +1,11 @@
 # ============ Modify section start ============
 # Modify year and Easter holidays for that year
-$year=2023
+$year=2024
 $czeHolidays=@(
     1,                          # Jan
     0,                          # Feb
-    0,                          # Mar
-    (7,10),                     # Apr 2023
+    31,                         # Mar
+    1,                          # Apr
     (1,8),                      # May
     0,                          # Jun
     (5,6),                      # Jul
@@ -41,8 +41,6 @@ $czeHolidays=@(
             }
         }
     }
-    # Days
-    Write-Output "=NETWORKDAYS(date($($year), $_,1),date($($lastDay))$($holidays))" 
     # Hours
-    # Write-Output "=NETWORKDAYS(date($($year),$_,1),date($($lastDay))$($holidays))*8"
+    Write-Output "=NETWORKDAYS(date($($year),$_,1),date($($lastDay))$($holidays))*8"
 }
