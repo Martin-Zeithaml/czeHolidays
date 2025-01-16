@@ -1,11 +1,11 @@
 # ============ Modify section start ============
 # Modify year and Easter holidays for that year
-$year=2024
+$year=2025
 $czeHolidays=@(
     1,                          # Jan
     0,                          # Feb
-    31,                         # Mar
-    1,                          # Apr
+    0,                          # Mar
+    (18,21),                    # Apr
     (1,8),                      # May
     0,                          # Jun
     (5,6),                      # Jul
